@@ -24,14 +24,14 @@ struct ContentView : View {
         NavigationView {
             List {
                 ForEach(users.identified(by: \.id)) { user in
-                    UserRow(user: user)
+                    UserRows(user: user)
                 }
             }.navigationBarTitle(Text("Youtubers"))
         }
     }
 }
 
-struct UserRow: View {
+struct UserRows: View {
     let user: User
     
     var body: some View {
