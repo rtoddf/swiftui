@@ -2,8 +2,17 @@
 
 import SwiftUI
 
+struct Post {
+    let id: Int
+    let thumbnail, username, text, imageName: String
+}
+
 struct ContentView : View {
-    let posts = ["1", "2", "3"]
+    let posts: [Post] = [
+        .init(id: 0, thumbnail: "franta", username: "Connor Franta", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse luctus eros sit amet lorem finibus, et varius ante interdum.", imageName: "franta_large"),
+        .init(id: 1, thumbnail: "crawford", username: "Matthew Crawford", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse luctus eros sit amet lorem finibus, et varius ante interdum.", imageName: "crawford_large"),
+        .init(id: 2, thumbnail: "dylan", username: "Dylan Geick", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse luctus eros sit amet lorem finibus, et varius ante interdum.", imageName: "dylan_large")
+    ]
     
     var body: some View {
         NavigationView {
@@ -24,8 +33,8 @@ struct ContentView : View {
                 }.frame(height: 100)
                 
                 // post rows
-                ForEach(posts.identified(by: \.self)){ post in
-                    PostView()
+                ForEach(posts.identified(by: \.id)){ post in
+                    PostView(post: post)
                 }
             }.navigationBarTitle(Text("Youtubers"))
         }
@@ -33,28 +42,30 @@ struct ContentView : View {
 }
 
 struct PostView: View {
+    let post: Post
+    
     var body: some View {
         VStack (alignment: .leading) {
             HStack {
-                Image("dylan")
+                Image(post.thumbnail)
                     .resizable()
                     .frame(width: 60, height: 60)
                     .aspectRatio(CGSize(width: 60, height: 60), contentMode: .fit)
                     .clipped()
                     .clipShape(Circle())
                 VStack (alignment: .leading, spacing: 4) {
-                    Text("Dylan Geick")
+                    Text(post.username)
                         .font(.headline)
                     Text("This is the date")
                         .font(.subheadline)
                 }
             }.padding(.leading, 16).padding(.top, 16)
             
-            Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse luctus eros sit amet lorem finibus, et varius ante interdum.")
+            Text(post.text)
                 .lineLimit(nil)
                 .padding(.leading, 16)
                 .padding(.trailing, 32)
-            Image("dylan_large")
+            Image(post.imageName)
                 .resizable()
                 .aspectRatio(CGSize(width: 1.500, height: 1.0), contentMode: .fit)
                 .padding(.trailing, -32)
