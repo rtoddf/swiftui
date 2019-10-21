@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0051C2C7235E1D3300B4BA76 /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0051C2C6235E1D3300B4BA76 /* Quote.swift */; };
 		008E166E235DF67600087FC7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008E166D235DF67600087FC7 /* AppDelegate.swift */; };
 		008E1670235DF67600087FC7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008E166F235DF67600087FC7 /* SceneDelegate.swift */; };
 		008E1672235DF67600087FC7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008E1671235DF67600087FC7 /* ContentView.swift */; };
@@ -14,9 +15,11 @@
 		008E1677235DF67B00087FC7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 008E1676235DF67B00087FC7 /* Preview Assets.xcassets */; };
 		008E167A235DF67B00087FC7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 008E1678235DF67B00087FC7 /* LaunchScreen.storyboard */; };
 		008E1685235DFB8D00087FC7 /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008E1684235DFB8D00087FC7 /* CircleImage.swift */; };
+		008E1687235E045E00087FC7 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008E1686235E045E00087FC7 /* MainView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0051C2C6235E1D3300B4BA76 /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
 		008E166A235DF67600087FC7 /* QuotesApp01.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuotesApp01.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		008E166D235DF67600087FC7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		008E166F235DF67600087FC7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -26,6 +29,7 @@
 		008E1679235DF67B00087FC7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		008E167B235DF67B00087FC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		008E1684235DFB8D00087FC7 /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
+		008E1686235E045E00087FC7 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +43,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0051C2C4235E1D0C00B4BA76 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		0051C2C5235E1D1F00B4BA76 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0051C2C6235E1D3300B4BA76 /* Quote.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		008E1661235DF67600087FC7 = {
 			isa = PBXGroup;
 			children = (
@@ -58,6 +77,8 @@
 		008E166C235DF67600087FC7 /* QuotesApp01 */ = {
 			isa = PBXGroup;
 			children = (
+				0051C2C5235E1D1F00B4BA76 /* Model */,
+				0051C2C4235E1D0C00B4BA76 /* Data */,
 				008E1681235DFA1A00087FC7 /* Views */,
 				008E166D235DF67600087FC7 /* AppDelegate.swift */,
 				008E166F235DF67600087FC7 /* SceneDelegate.swift */,
@@ -82,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				008E1684235DFB8D00087FC7 /* CircleImage.swift */,
+				008E1686235E045E00087FC7 /* MainView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -160,6 +182,8 @@
 				008E166E235DF67600087FC7 /* AppDelegate.swift in Sources */,
 				008E1685235DFB8D00087FC7 /* CircleImage.swift in Sources */,
 				008E1670235DF67600087FC7 /* SceneDelegate.swift in Sources */,
+				008E1687235E045E00087FC7 /* MainView.swift in Sources */,
+				0051C2C7235E1D3300B4BA76 /* Quote.swift in Sources */,
 				008E1672235DF67600087FC7 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

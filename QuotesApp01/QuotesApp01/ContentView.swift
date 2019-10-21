@@ -2,34 +2,18 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        MainView()
-    }
-}
-
-struct MainView: View {
-    let quotes = ["quote 1", "quote 2", "quote 1", "quote 2", "quote 1", "quote 2", "quote 1", "quote 2", "quote 1", "quote 2", "quote 1", "quote 2"]
-    
-    var body: some View {
-        VStack() {
-            HStack {
-                Text("Quotes Available")
-                    .font(.subheadline)
-                    .italic()
-                    .foregroundColor(.purple)
-            }
-            
-            ScrollView(.horizontal, showsIndicators: false){
-                HStack {
-                    ForEach(self.quotes, id: \.self) {
-                        quote in
-                        VStack {
-                            CircleImage(imageName: "lilly")
-                            Text(quote)
-                        }
-                    }
-                }
-            }
-        }
+        VStack {
+            CircleImage(imageName: "lilly")
+                .frame(width: 200, height: 200)
+                .padding(.top, 90)
+                .padding(.bottom, 20)
+            MainView()
+            Spacer()
+        }.background(Image("motivation_bg")
+            .resizable()
+            .scaledToFill()
+            .edgesIgnoringSafeArea(.all))
+        
     }
 }
 
