@@ -6,8 +6,6 @@ struct ContentView: View {
     }
 }
 
-
-
 struct MainView: View {
     let quotes = ["quote 1", "quote 2", "quote 1", "quote 2", "quote 1", "quote 2", "quote 1", "quote 2", "quote 1", "quote 2", "quote 1", "quote 2"]
     
@@ -25,9 +23,7 @@ struct MainView: View {
                     ForEach(self.quotes, id: \.self) {
                         quote in
                         VStack {
-                            Image("lilly")
-                                .resizable()
-                                .frame(width: 100, height: 100)
+                            CircleImage(imageName: "lilly")
                             Text(quote)
                         }
                     }
