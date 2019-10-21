@@ -22,7 +22,7 @@ struct MainView: View {
             
             ScrollView(.horizontal, showsIndicators: false){
                 HStack {
-                    ForEach(self.quotes, id: \.id) {
+                    ForEach(self.quotes, id: \.name) {
                         quote in
                         
                         VStack {
