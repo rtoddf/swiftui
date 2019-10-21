@@ -9,14 +9,7 @@
 import SwiftUI
 
 struct MainView: View {
-    var quotes: [Quote] = [
-        Quote(quote: "Whatever the mind can achieve...", name: "James Bonc"),
-        Quote(quote: "Whatever the mind can achieve...", name: "James Bonc"),
-        Quote(quote: "Whatever the mind can achieve...", name: "James Bonc"),
-        Quote(quote: "Whatever the mind can achieve...", name: "James Bonc"),
-        Quote(quote: "Whatever the mind can achieve...", name: "James Bonc"),
-        Quote(quote: "Whatever the mind can achieve...", name: "James Bonc")
-    ]
+    var quotes: [Quote]
     
     var body: some View {
         VStack() {
@@ -57,8 +50,8 @@ struct MainView: View {
     }
 }
 
-struct MainView_Previews: PreviewProvider {
-    static var previews: some View {
-        MainView()
-    }
-}
+//struct MainView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        MainView()
+//    }
+//}
