@@ -1,8 +1,20 @@
 import SwiftUI
 
 struct ContentView: View {
-    var body: some View {
-        Text("Hello World")
+    @ObservedObject var networkingManager = NetworkingManager()
+    
+    var body: some View {        
+        List(networkingManager.dataList) {
+            data in
+            VStack(alignment: .leading, spacing: 8) {
+                Text(data.title)
+                    .font(.title)
+                    .foregroundColor(.gray)
+                Text(data.body)
+                    .font(.body)
+            }
+            
+        }
     }
 }
 
